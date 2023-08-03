@@ -30,4 +30,23 @@ toggleBtn.addEventListener("click", function(){
     mainMenu.classList.toggle("active");
 })
 
+// Hero Text Animation
+const textAnimation = document.querySelector("#animation-text");
+const textLoad = ()=>{
+    setTimeout(()=>{
+        textAnimation.textContent="a Freelancer";
+    }, 0);
+    setTimeout(()=>{
+        textAnimation.textContent="a Web Designer";
+    }, 4000);
+    setTimeout(()=>{
+        textAnimation.textContent="a WP Devloper";
+    }, 8000);
+    setTimeout(()=>{
+        textAnimation.textContent="a Book Designer";
+    }, 16000);
+}
+textLoad();
+setInterval(textLoad, 32000)
+
 
