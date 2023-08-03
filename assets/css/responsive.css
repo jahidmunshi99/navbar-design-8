@@ -1,0 +1,36 @@
+@media (max-width:1280px) {   
+   
+}
+
+@media (max-width:750px) { 
+    .navbar {
+        padding: 10px 0px;
+    }
+    .main-menu {
+        display: none;
+    }
+    .main-menu ul{
+        display: flex;
+        flex-direction: column;
+    }   
+
+    /* Toggle Btn */
+    .togglebtn{
+        display: block;
+    }
+    .nav-group .btn-group .search-btn {
+        margin-right: 30px;
+    }
+    .search-input{
+        padding: 0px 42px ; 
+    }
+    .mainMenu.active{
+        display: block;
+        position: absolute;
+        top: 61px;
+        left: -21px;
+        width: 705px;
+        height: 340px;
+        background: #000;
+    }
+}

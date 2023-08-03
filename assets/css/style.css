@@ -1,0 +1,201 @@
+/* ============================ Custom Fonts ============================ */
+@font-face{
+    font-family: theme-font;
+    src: url("/assets/fonts/JosefinSans-Regular.ttf");
+}
+@font-face{
+    font-family: theme-medium;
+    src: url("/assets/fonts/JosefinSans-Medium.ttf");
+}
+@font-face{
+    font-family: theme-bold;
+    src: url("/assets/fonts/JosefinSans-Bold.ttf");
+}
+/* ============================ Base ============================ */
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Custom Color */
+    --theme-color:#FF3D4F;
+    --light-white-color:#fff;
+    --theme-black-color:#000;
+    --gray-light-color:#9c9494;
+    /* Typography */
+    --theme-font:theme-medium;
+    --normal-font-size:1rem;
+    --medium-font-size:1.5rem;
+    --medium-width:600;
+    --havy-width:800;
+}
+body{
+    font-family: var(--theme-font);
+    font-size: var(--normal-font-size);
+}
+.container{
+    max-width: 1280px;
+    padding: 0 3%;
+    margin: 0 auto;
+}
+ul li{list-style-type: none;} a{text-decoration: none; color: var(--theme-black-color);}
+/* ============================ Header Section ============================ */
+.header-section{
+    background: var(--theme-color);
+    position: relative;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+.navbar .nav-gorup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*-------- Social Icon --------*/
+/* .navbar .social-icon */
+.navbar .social-icon ul li{
+    display: inline-block;
+    text-align: center;
+}
+.navbar .social-icon ul li a i{
+    color: var(--light-white-color);
+    background: var(--theme-black-color);
+    padding: 8px;
+    border-radius: 50px;
+}
+.navbar .social-icon ul li a i:hover{
+    transform: rotate(-360deg);
+    transition: 0.3s;
+}
+/*-------- Logo --------*/
+/* .navbar .logo */
+/* .navbar .nav-gorup .logo a */
+.navbar .logo label{
+    font-size: 32px;
+    font-weight: var(--havy-width);
+}
+.navbar .logo label span{
+    color: var(--light-white-color);
+}
+/* Nav Group */
+.navbar .nav-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*-------- Main Menu --------*/
+/* .navbar .main-menu */
+.nav-group .main-menu .nav-item{
+    display: inline-block;
+}
+.nav-group .main-menu .nav-item .nav-link{
+    padding: 10px 21px;
+    /* background: #000; */
+    color: var(--light-white-color);
+}
+.nav-group .main-menu .nav-item{
+    position: relative;
+}
+.nav-group .main-menu .nav-item a i{
+    padding:2px;
+}
+/*-------- Button Group--------*/
+.nav-group .btn-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+/*-------- Seach Button--------*/
+.nav-group .btn-group .search-btn{
+    /* background: #000; */
+    margin-left: 20px;
+    z-index: 10;
+    margin-top: 5px;
+}
+/*-------- Close Button --------*/
+.nav-group .btn-group .close-btn{
+    z-index: 10;
+    margin-left: 20px;
+    display: none;
+}
+.nav-group .btn-group .close-btn.active{
+    display: block;
+}
+.search-input{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    transition: 0.5s;
+    padding: 0px 64px ; 
+    background: var(--light-white-color);
+}
+.search-input input{
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid var(--gray-light-color);
+    font-size: var(--normal-font-size);
+}
+.search-input input ::placeholder{
+    background: #000;
+}
+.search-input.active{
+    display: block;
+    right: 0;
+}
+
+/* Toggle Button */
+.togglebtn{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+/* DropDown Menu */
+.dropdown{
+    position: relative;
+}
+.dropdown .nav-link i{
+    position: absolute;
+    transition: 0.3s;
+}
+.dropdown .nav-link i:hover{
+    transform: rotate(180deg);
+}
+.dropdown-menu {
+    display: none;
+	position: absolute;
+	width: 266px;
+	height: 162px;
+	background: #000;
+	top: 40px;
+	padding: 10px 0;
+}
+.dropdown-menu.active{
+    display: block;
+}
+.dropdown-menu ul li{
+    padding: 8px 19px;
+}
+.dropdown-menu ul li a{
+    color: var(--light-white-color);
+}
+
+.dropdown-menu ul li:hover{
+    background: var(--theme-color);
+    transition: 0.3s;
+}
